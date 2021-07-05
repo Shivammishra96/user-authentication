@@ -58,16 +58,10 @@ if(!empty($_POST['user']) && !empty($_POST['pass'])) {
   
     if($user == $dbusername && $pass == $dbpassword)  
     {  
-    session_start();  
-    $_SESSION['sess_user']=$user; 
-    $_SESSION['loggedin']=true;
-    $_SESSION['sno']=$sno;  
-  
-    /* Redirect browser */  
-    header("Location:index.php");  
+     echo "Authentication Successful!.You are an authenticated User!"  
     }  
     } else {  
-    echo "Invalid username or password!";  
+    echo "Authentication Failed!.Invalid username or password!";  
     }  
   
 } else {  
